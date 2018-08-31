@@ -53,6 +53,7 @@ services:
     build: ../converter
     command: run
     restart: unless-stopped
+    tty: true #handle sigint
     volumes:
       - "./etc/converter/converter.yaml:/etc/ipfix-rita/converter.yaml:ro"
     configs:
